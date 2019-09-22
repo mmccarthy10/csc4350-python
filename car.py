@@ -9,3 +9,9 @@ class Car:
     def isStarted(self):
         return self.started
 
+    def accelerate(self):
+        if isStarted():
+            Car.speed = Car.speed + 5
+            return True
+        else:
+            return False
