@@ -21,6 +21,16 @@ class Car:
     def show_speed(self):
         return Car.speed
 
+# developed by dave
+    def brake(self):
+        if Car.isStarted(self):
+            Car.speed = Car.speed - 5
+            return True
+        else:
+            print("car must be on")
+            return False
+
+
 
 newCar = Car()
 newCar.start()
@@ -31,3 +41,9 @@ while newCar.speed != 30:
 print("Car has accelerated to :", newCar.show_speed())
 
 
+newCar.brake()
+newCar.brake()
+newCar.brake()
+newCar.brake()
+
+print("speed: ", newCar.show_speed())
