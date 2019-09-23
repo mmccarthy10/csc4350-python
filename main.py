@@ -1,46 +1,16 @@
-# Constructor by Matt McCarthy
-class Car:
-    speed = 0
-    started = False
+#import Car from car.py
+from car import Car
 
-    def start(self):
-        self.started = True
-
-    def isStarted(self):
-        return self.started
-# Developed by Thomas
-
-    def accelerate(self):
-        if Car.isStarted(self):
-            Car.speed = Car.speed + 5
-            return True
-        else:
-            return False
-# developed by Thomas
-
-    def show_speed(self):
-        return Car.speed
-
-# developed by dave
-    def brake(self):
-        if Car.isStarted(self):
-            Car.speed = Car.speed - 5
-            return True
-        else:
-            print("car must be on")
-            return False
-
-
-
+# Developed by Matt McCarthy
 newCar = Car()
 newCar.start()
+# developed by Thomas
 print(newCar.isStarted(), "\nSpeed is:", newCar.show_speed())
-
 while newCar.speed != 30:
     newCar.accelerate()
 print("Car has accelerated to :", newCar.show_speed())
 
-
+# developed by dave
 newCar.brake()
 newCar.brake()
 newCar.brake()
